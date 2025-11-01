@@ -184,7 +184,7 @@ export const logSuggestionsAndReturn = async (
 						)
 					} to ${chalk.underline(statement.newDataType)} with ${count} items`,
 				);
-				statementsToExecute.push(`truncate table ${statement.tableName};`);
+				statementsToExecute.push(`truncate table \`${statement.tableName}\`;`);
 				tablesToTruncate.push(statement.tableName);
 				shouldAskForApprove = true;
 			}
@@ -205,7 +205,7 @@ export const logSuggestionsAndReturn = async (
 					);
 
 					tablesToTruncate.push(statement.tableName);
-					statementsToExecute.push(`truncate table ${statement.tableName};`);
+					statementsToExecute.push(`truncate table \`${statement.tableName}\`;`);
 
 					shouldAskForApprove = true;
 				}
@@ -228,7 +228,7 @@ export const logSuggestionsAndReturn = async (
 					);
 
 					tablesToTruncate.push(statement.tableName);
-					statementsToExecute.push(`truncate table ${statement.tableName};`);
+					statementsToExecute.push(`truncate table \`${statement.tableName}\`;`);
 
 					shouldAskForApprove = true;
 				}
@@ -302,7 +302,7 @@ export const logSuggestionsAndReturn = async (
 					);
 
 					tablesToTruncate.push(statement.tableName);
-					statementsToExecute.push(`truncate table ${statement.tableName};`);
+					statementsToExecute.push(`truncate table \`${statement.tableName}\`;`);
 
 					shouldAskForApprove = true;
 				}
@@ -333,7 +333,7 @@ export const logSuggestionsAndReturn = async (
 				);
 				if (data?.index === 1) {
 					tablesToTruncate.push(statement.tableName);
-					statementsToExecute.push(`truncate table ${statement.tableName};`);
+					statementsToExecute.push(`truncate table \`${statement.tableName}\`;`);
 					shouldAskForApprove = true;
 				}
 			}
